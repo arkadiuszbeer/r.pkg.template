@@ -186,7 +186,8 @@ jobs:
       - name: Run Staged dependencies 🎦
         uses: arkadiuszbeer/staged-dependencies-action@main
         env:
-          GITHUB_PAT: ${{ secrets.REPO_GITHUB_TOKEN }}
+          GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+          SD_QUIET: false
         with:
           path: ${{ github.event.repository.name }}
           enable-check: ${{ inputs.enable-staged-dependencies-check }}
