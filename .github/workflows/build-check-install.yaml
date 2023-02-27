@@ -26,7 +26,7 @@ on:
       install-system-dependencies:
         description: Check for and install system dependencies
         required: false
-        default: false
+        default: true
         type: boolean
       enable-staged-dependencies-check:
         description: Enable staged dependencies YAML check
