@@ -136,7 +136,7 @@ jobs:
           - image: ghcr.io/insightsengineering/rstudio_4.2.2_bioc_3.16
             tag: latest
     name: ${{ matrix.config.image }}, version ${{ matrix.config.tag }}
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     if: >
       !contains(github.event.commits[0].message, '[skip r-cmd]')
         && github.event.pull_request.draft == false
