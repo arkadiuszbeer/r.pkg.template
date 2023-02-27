@@ -4,7 +4,7 @@ name: Version check 🏁
 on:
   push:
     branches:
-      - main
+      - main_no
   pull_request:
     types:
       - opened
