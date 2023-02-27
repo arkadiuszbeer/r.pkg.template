@@ -184,7 +184,7 @@ jobs:
           path: ~/.staged.dependencies
 
       - name: Run Staged dependencies 🎦
-        uses: insightsengineering/staged-dependencies-action@v1
+        uses: arkadiuszbeer/staged-dependencies-action@main
         env:
           GITHUB_PAT: ${{ secrets.REPO_GITHUB_TOKEN }}
         with:
