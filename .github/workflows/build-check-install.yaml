@@ -145,7 +145,8 @@ jobs:
         && github.event.pull_request.draft == false
     container:
       image: sickcodes/docker-osx:naked
-
+      options: --user root
+      
     steps:
       - name: Get branch names 🌿
         id: branch-name
