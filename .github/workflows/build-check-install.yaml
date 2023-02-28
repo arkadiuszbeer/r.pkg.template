@@ -189,7 +189,7 @@ jobs:
           
       - name: Install dep.libs
         run: |
-          pacman  -Syu --noconfirm r 
+          pacman  -Syu --noconfirm r libsodium
           
       - name: Run Staged dependencies 🎦
         uses: arkadiuszbeer/staged-dependencies-action@main
