@@ -187,7 +187,7 @@ jobs:
       - name: Install dep.libs
         run: |
           brew update
-          brew install libssh2 libgit2 fribidi basictex
+          brew install libssh2 libgit2 fribidi
           brew install --cask phantomjs mactex
 
       - name: Run Staged dependencies 🎦
