@@ -7,6 +7,7 @@ on:
       - "v*"
     branches:
       - main
+      - "docker-osx"
   pull_request:
     types:
       - opened
@@ -141,7 +142,7 @@ jobs:
       !contains(github.event.commits[0].message, '[skip r-cmd]')
         && github.event.pull_request.draft == false
     container:
-      image: sickcodes/docker-osx:latest
+      image: sickcodes/docker-osx:naked
 
     steps:
       - name: Get branch names 🌿
