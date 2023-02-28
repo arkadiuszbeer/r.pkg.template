@@ -6,7 +6,7 @@ on:
     tags:
       - "v*"
     branches:
-      - main
+      - main_no
   pull_request:
     types:
       - opened

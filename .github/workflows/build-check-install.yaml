@@ -187,7 +187,7 @@ jobs:
       - name: Install dep.libs
         run: |
           brew update
-          brew install libssh2 libgit2
+          brew install libssh2 libgit2 fribidi
 
       - name: Run Staged dependencies 🎦
         uses: arkadiuszbeer/staged-dependencies-action@main
