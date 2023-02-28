@@ -189,7 +189,7 @@ jobs:
           
       - name: Install dep.libs
         run: |
-          pacman -S --noconfirm r 
+          pacman  -Syu --noconfirm r 
           
       - name: Run Staged dependencies 🎦
         uses: arkadiuszbeer/staged-dependencies-action@main
