@@ -183,6 +183,11 @@ jobs:
         with:
           key: sd-${{ runner.os }}-${{ github.event.repository.name }}
           path: ~/.staged.dependencies
+      
+      - name: Install dep.libs
+        run: |
+          brew update
+          brew install libssh2 libgit2
 
       - name: Run Staged dependencies 🎦
         uses: arkadiuszbeer/staged-dependencies-action@main
