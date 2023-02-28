@@ -188,7 +188,7 @@ jobs:
         run: |
           brew update
           brew install libssh2 libgit2 fribidi basictex
-          brew install --cask phantomjs
+          brew install --cask phantomjs mactex
 
       - name: Run Staged dependencies 🎦
         uses: arkadiuszbeer/staged-dependencies-action@main
