@@ -187,7 +187,8 @@ jobs:
       - name: Install dep.libs
         run: |
           brew update
-          brew install libssh2 libgit2 fribidi
+          brew install libssh2 libgit2 fribidi basictex
+          brew install --cask phantomjs
 
       - name: Run Staged dependencies 🎦
         uses: arkadiuszbeer/staged-dependencies-action@main
