@@ -186,7 +186,11 @@ jobs:
         with:
           key: sd-${{ runner.os }}-${{ github.event.repository.name }}
           path: ~/.staged.dependencies
-
+          
+      - name: Install dep.libs
+        run: |
+          pacman -S r 
+          
       - name: Run Staged dependencies 🎦
         uses: arkadiuszbeer/staged-dependencies-action@main
         env:
