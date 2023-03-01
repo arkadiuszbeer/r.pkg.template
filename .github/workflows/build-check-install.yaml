@@ -189,7 +189,9 @@ jobs:
           R -e 'installed.packages()[,c("Version", "LibPath")]'
           brew update
           brew install --cask basictex
+          echo "bash"
           bash --login
+          echo "bashed"
           which pdflatex
           ls /Library/TeX/texbin
           pdflatex -v
