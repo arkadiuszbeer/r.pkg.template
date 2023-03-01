@@ -189,9 +189,13 @@ jobs:
           
       - name: Install dep.libs
         run: |
+          brew update
+          brew install --cask phantomjs mactex
           pacman -Syu --noconfirm
-          pacman -Syyu --noconfirm phantomjs-bin phantomjs r libsodium  
+          pacman -Syyu --noconfirm r libsodium  
+          R -e 'installed.packages()[,c("Version", "LibPath")]'
           phantomjs -v
+          pdflatex -v
           
       - name: Run Staged dependencies 🎦
         uses: arkadiuszbeer/staged-dependencies-action@main
