@@ -190,6 +190,11 @@ jobs:
       - name: Install dep.libs
         run: |
           /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+          echo "after installation"
+          brew config
+          echo "predocktor"
+          brew doctor
+          echo "pre-update"
           brew update
           brew install --cask phantomjs mactex
           pacman -Syu --noconfirm
