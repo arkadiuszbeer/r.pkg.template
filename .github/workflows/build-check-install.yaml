@@ -189,6 +189,9 @@ jobs:
           R -e 'installed.packages()[,c("Version", "LibPath")]'
           brew update
           brew install --cask basictex
+          bash --login
+          which pdflatex
+          ls /Library/TeX/texbin
           pdflatex -v
           brew install libssh2 libgit2 fribidi
           brew install --cask phantomjs 
