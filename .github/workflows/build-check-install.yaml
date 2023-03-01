@@ -186,13 +186,13 @@ jobs:
       
       - name: Install dep.libs
         run: |
+          R -e 'installed.packages()[,c("Version", "LibPath")]
           brew update
-          brew install libssh2 libgit2 fribidi
-          brew install --cask phantomjs mactex
-          exec bash -l
-          phantomjs -v
+          brew install --cask basictex
           pdflatex -v
-
+          brew install libssh2 libgit2 fribidi
+          brew install --cask phantomjs 
+          phantomjs -v
 
       - name: Run Staged dependencies 🎦
         uses: arkadiuszbeer/staged-dependencies-action@main
