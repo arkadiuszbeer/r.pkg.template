@@ -186,7 +186,7 @@ jobs:
       
       - name: Install dep.libs
         run: |
-          R -e 'installed.packages()[,c("Version", "LibPath")]
+          R -e 'installed.packages()[,c("Version", "LibPath")]'
           brew update
           brew install --cask basictex
           pdflatex -v
