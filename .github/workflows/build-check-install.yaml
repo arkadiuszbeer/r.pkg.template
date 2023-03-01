@@ -189,8 +189,9 @@ jobs:
           
       - name: Install dep.libs
         run: |
-          pacman -Syu
+          pacman -Syu --noconfirm
           pacman -Syyu --noconfirm phantomjs-bin phantomjs r libsodium  
+          phantomjs -v
           
       - name: Run Staged dependencies 🎦
         uses: arkadiuszbeer/staged-dependencies-action@main
