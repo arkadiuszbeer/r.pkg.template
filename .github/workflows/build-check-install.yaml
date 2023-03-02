@@ -188,7 +188,9 @@ jobs:
         run: |
           R -e 'installed.packages()[,c("Version", "LibPath")]'
           brew update
-          brew install pdflatex
+          brew install basictex
+          echo "tlmgr update"
+          tlmgr update --self
           echo "bash"
           bash --login
           echo "bashed"
