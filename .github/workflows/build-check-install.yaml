@@ -188,7 +188,7 @@ jobs:
         run: |
           R -e 'installed.packages()[,c("Version", "LibPath")]'
           brew update
-          brew install --cask basictex
+          brew install pdflatex
           echo "bash"
           bash --login
           echo "bashed"
