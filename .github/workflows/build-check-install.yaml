@@ -189,6 +189,8 @@ jobs:
           R -e 'installed.packages()[,c("Version", "LibPath")]'
           brew update
           brew install basictex
+          export PATH="/Library/TeX/texbin/:$PATH"
+          eval "$(/usr/libexec/path_helper)"
           echo "tlmgr update"
           tlmgr update --self
           echo "bash"
