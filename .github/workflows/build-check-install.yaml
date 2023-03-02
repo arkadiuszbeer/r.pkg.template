@@ -189,6 +189,9 @@ jobs:
           
       - name: Install dep.libs
         run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git config --global remote.origin.url
+          git remote -v
           /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
           echo "after installation"
           brew config
