@@ -190,7 +190,8 @@ jobs:
           brew update
           brew install basictex
           export PATH="/Library/TeX/texbin/:$PATH"
-          #eval "$(/usr/libexec/path_helper)"
+          echo "PATH is $PATH"
+          eval "$(/usr/libexec/path_helper)"
           echo "bash"
           bash --login
           echo "bashed"
