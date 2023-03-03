@@ -187,6 +187,8 @@ jobs:
       - name: Install dep.libs
         run: |
           R -e 'installed.packages()[,c("Version", "LibPath")]'
+          R -e 'sessionInfo()'
+          R -e 'Sys.info()'
           brew update
           brew install basictex
           export PATH="/Library/TeX/texbin/:$PATH"
@@ -211,7 +213,7 @@ jobs:
         with:
           path: ${{ github.event.repository.name }}
           enable-check: ${{ inputs.enable-staged-dependencies-check }}
-          run-system-dependencies: ${{ inputs.install-system-dependencies }}
+          run-system-dependencies: true
           direction: ${{ inputs.sd-direction }}
 
       - name: Show session info and installed packages ℹ
