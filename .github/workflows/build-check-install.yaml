@@ -316,6 +316,7 @@ jobs:
             }
           }
           EOF
+          echo "PATH is $PATH"
           R CMD check ${ADDITIONAL_PARAMS} ${{ env.PKGBUILD }}
         shell: bash
         continue-on-error: true
