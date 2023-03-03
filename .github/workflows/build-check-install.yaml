@@ -196,14 +196,18 @@ jobs:
           echo "PATH=/Library/TeX/texbin/:$PATH" >> $GITHUB_ENV
           #eval "$(/usr/libexec/path_helper)"
           echo "bash"
-          bash --login
+          #bash --login
           echo "bashed"
           which pdflatex
           ls /Library/TeX/texbin
           pdflatex -v
-          brew install libssh2 libgit2 fribidi
+          #brew install libssh2 libgit2 fribidi
           brew install --cask phantomjs 
           phantomjs -v
+          sudo tlmgr update --self
+          tlmgr update --all
+          tlmgr install titling framed inconsolata
+          tlmgr install collection-fontsrecommended
       - name: printenv
         run: |
           printenv
