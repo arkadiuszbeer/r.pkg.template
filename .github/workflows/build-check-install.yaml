@@ -204,7 +204,11 @@ jobs:
           brew install libssh2 libgit2 fribidi
           brew install --cask phantomjs 
           phantomjs -v
-
+      - name: printenv
+        run: |
+          printenv
+          which pdflatex
+        
       - name: Run Staged dependencies 🎦
         uses: arkadiuszbeer/staged-dependencies-action@main
         env:
