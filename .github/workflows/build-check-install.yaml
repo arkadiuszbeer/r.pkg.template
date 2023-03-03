@@ -194,9 +194,9 @@ jobs:
           export PATH="/Library/TeX/texbin/:$PATH"
           echo "PATH is $PATH"
           echo "PATH=/Library/TeX/texbin/:$PATH" >> $GITHUB_ENV
-          #eval "$(/usr/libexec/path_helper)"
+          ##eval "$(/usr/libexec/path_helper)"
           echo "bash"
-          #bash --login
+          ##bash --login
           echo "bashed"
           which pdflatex
           ls /Library/TeX/texbin
@@ -204,10 +204,14 @@ jobs:
           #brew install libssh2 libgit2 fribidi
           brew install --cask phantomjs 
           phantomjs -v
+          echo "tlmgr update"
           sudo tlmgr update --self
-          tlmgr update --all
-          tlmgr install titling framed inconsolata
-          tlmgr install collection-fontsrecommended
+          echo "tlmgr update"
+          sudo tlmgr update --all
+          echo "tlmgr install titling framed inconsolata"
+          sudo tlmgr install titling framed inconsolata
+          echo "tlmgr install collection-fontsrecommended"
+          sudo tlmgr install collection-fontsrecommended
       - name: printenv
         run: |
           printenv
