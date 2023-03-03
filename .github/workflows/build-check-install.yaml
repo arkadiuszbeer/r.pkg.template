@@ -191,7 +191,8 @@ jobs:
           brew install basictex
           export PATH="/Library/TeX/texbin/:$PATH"
           echo "PATH is $PATH"
-          eval "$(/usr/libexec/path_helper)"
+          echo "PATH=/Library/TeX/texbin/:$PATH" >> $GITHUB_ENV
+          #eval "$(/usr/libexec/path_helper)"
           echo "bash"
           bash --login
           echo "bashed"
