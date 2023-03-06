@@ -14,7 +14,8 @@ Depends:
 Imports:
     plumber,
     shiny,
-    stringr
+    stringr,
+    git2r
 Suggests:
     future,
     httr,
