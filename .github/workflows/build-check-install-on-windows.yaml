@@ -189,6 +189,7 @@ jobs:
           Rscript.exe -e 'installed.packages()[,c("Version", "LibPath")]'
           Rscript.exe -e 'sessionInfo()'
           Rscript.exe -e 'Sys.info()'
+          choco install texlive
       - name: printenv
         run: |
           printenv
