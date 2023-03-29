@@ -1,5 +1,5 @@
 ---
-name: R CMD Check 🧬
+name: R CMD Check on Windows🧬
 
 on:
   push:
@@ -186,9 +186,9 @@ jobs:
       
       - name: Install dep.libs
         run: |
-          R -e 'installed.packages()[,c("Version", "LibPath")]'
-          R -e 'sessionInfo()'
-          R -e 'Sys.info()'
+          Rscript.exe -e 'installed.packages()[,c("Version", "LibPath")]'
+          Rscript.exe -e 'sessionInfo()'
+          Rscript.exe -e 'Sys.info()'
       - name: printenv
         run: |
           printenv
