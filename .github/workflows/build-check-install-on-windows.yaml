@@ -186,7 +186,7 @@ jobs:
       
       - name: Install dep.libs
         run: |
-          Rscript.exe -e 'installed.packages()[,c("Version", "LibPath")]'
+          Rscript.exe -e 'installed.packages()[,c(\"Version\", \"LibPath\")]'
           Rscript.exe -e 'sessionInfo()'
           Rscript.exe -e 'Sys.info()'
           choco install pandoc
